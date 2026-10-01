@@ -59,7 +59,6 @@
           <a href="#signals" id="nav-signals" class="nav-pill appear appear--soft" style="--d: 0.28s;">Trust Signals</a>
           <a href="#categories" id="nav-categories" class="nav-pill appear appear--scale" style="--d: 0.40s;">Security Checks</a>
           <a href="#about" id="nav-about" class="nav-pill appear appear--soft" style="--d: 0.52s;">About</a>
-          <button type="button" id="nav-api-key" class="nav-pill appear appear--scale" style="--d: 0.60s; cursor: pointer; border: 1px solid rgba(255,255,255,0.22); background: rgba(255,255,255,0.08); color: #fff;">⚙️ API Key</button>
         </nav>
 
         <a href="#top" class="btn btn-solid header-cta appear appear--scale" style="--d: 0.34s;">Analyze Website</a>
@@ -384,25 +383,6 @@
 
       <!-- Stats Footer -->
       <footer class="stats">
-        <div class="stat appear appear--stat" style="--d: 1.12s;">
-          <svg class="stat-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-            <defs>
-              <linearGradient id="pillGrad1" x1="3" y1="2" x2="14" y2="22" gradientUnits="userSpaceOnUse">
-                <stop offset="0%" stop-color="#ffffff" stop-opacity="0.38"/>
-                <stop offset="100%" stop-color="#3a3a3a" stop-opacity="0.62"/>
-              </linearGradient>
-              <linearGradient id="pillGrad2" x1="3" y1="2" x2="14" y2="22" gradientUnits="userSpaceOnUse">
-                <stop offset="0%" stop-color="#3a3a3a" stop-opacity="0.38"/>
-                <stop offset="100%" stop-color="#ffffff" stop-opacity="0.62"/>
-              </linearGradient>
-            </defs>
-            <rect x="3.4" y="2.6" width="7.2" height="18.8" rx="3.6" fill="url(#pillGrad1)" />
-            <rect x="13.4" y="2.6" width="7.2" height="18.8" rx="3.6" fill="url(#pillGrad2)" />
-            <rect x="9.2" y="10.9" width="5.6" height="2.2" rx="1.1" fill="#4a4a4a" />
-          </svg>
-          <span>4.2M+ domains analyzed</span>
-        </div>
-
         <div class="stat appear appear--stat" style="--d: 1.28s;">
           <svg class="stat-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
             <rect x="2.4" y="2.4" width="19.2" height="19.2" rx="6.2" fill="#ffffff" />
@@ -514,39 +494,6 @@
             <span>@azanejaz_ on Instagram</span>
             <span>↗</span>
           </a>
-        </div>
-      </div>
-    </div>
-
-    <!-- Threat Intel API Key Modal -->
-    <div id="apikey-modal" class="modal-backdrop" aria-hidden="true" role="dialog" aria-labelledby="apikey-modal-title">
-      <div class="modal-card">
-        <div class="modal-header">
-          <h2 id="apikey-modal-title">Threat Intelligence Configuration</h2>
-          <button type="button" id="apikey-modal-close" class="modal-close-btn" aria-label="Close dialog">✕</button>
-        </div>
-
-        <div class="explain-category">
-          <h4>VirusTotal API Key</h4>
-          <p>Configure your free VirusTotal API key to enable live threat detection across 70+ global antivirus & reputation vendors on every scan.</p>
-          
-          <div style="margin-top: 14px;">
-            <label style="font-size: 12px; color: #94a3b8; display: block; margin-bottom: 6px;">VirusTotal API Key (Saved securely in your browser & passed to analysis):</label>
-            <input type="password" id="vt-key-input" placeholder="Paste your 64-character VirusTotal key here" style="width: 100%; padding: 10px 14px; background: rgba(0,0,0,0.6); border: 1px solid rgba(255,255,255,0.18); border-radius: 8px; color: #fff; font-family: monospace; font-size: 13px; box-sizing: border-box;" />
-          </div>
-
-          <div id="vt-key-status" style="margin-top: 10px; font-size: 12.5px; color: #94a3b8;">
-            Status: Not configured
-          </div>
-
-          <div style="margin-top: 16px; display: flex; gap: 10px;">
-            <button type="button" id="save-vt-key-btn" style="padding: 9px 18px; background: #fff; color: #000; font-weight: 600; border: none; border-radius: 6px; cursor: pointer; font-size: 13px;">Save Key</button>
-            <button type="button" id="clear-vt-key-btn" style="padding: 9px 14px; background: rgba(239, 68, 68, 0.2); color: #f87171; border: 1px solid rgba(239, 68, 68, 0.4); border-radius: 6px; cursor: pointer; font-size: 13px;">Clear Key</button>
-          </div>
-          
-          <p style="margin-top: 14px; font-size: 12px; color: #64748b; line-height: 1.5;">
-            Tip: You can get a free key at <a href="https://www.virustotal.com/gui/join-us" target="_blank" rel="noopener noreferrer" style="color: #60a5fa; text-decoration: underline;">virustotal.com</a>. If hosting on Vercel, you can also set the <code>VIRUSTOTAL_API_KEY</code> environment variable in your Vercel Project Settings.
-          </p>
         </div>
       </div>
     </div>

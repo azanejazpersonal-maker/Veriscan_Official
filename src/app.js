@@ -373,84 +373,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // API Key Settings Modal
-  const navApiKey = document.getElementById('nav-api-key');
-  const apikeyModal = document.getElementById('apikey-modal');
-  const apikeyModalClose = document.getElementById('apikey-modal-close');
-  const vtKeyInput = document.getElementById('vt-key-input');
-  const vtKeyStatus = document.getElementById('vt-key-status');
-  const saveVtKeyBtn = document.getElementById('save-vt-key-btn');
-  const clearVtKeyBtn = document.getElementById('clear-vt-key-btn');
-
-  function updateKeyStatusUI() {
-    const existingKey = localStorage.getItem('vt_api_key') || '';
-    if (existingKey.trim()) {
-      if (vtKeyInput) vtKeyInput.value = existingKey;
-      if (vtKeyStatus) {
-        vtKeyStatus.innerHTML = `<span style="color:#4ade80">● Key Configured (${existingKey.length} chars)</span> — Threat intelligence is active for all scans.`;
-      }
-      if (navApiKey) {
-        navApiKey.innerHTML = `⚙️ Key <span style="color:#4ade80;font-size:10px">● Active</span>`;
-      }
-    } else {
-      if (vtKeyInput) vtKeyInput.value = '';
-      if (vtKeyStatus) {
-        vtKeyStatus.innerHTML = `<span style="color:#94a3b8">○ No custom key configured</span> (Server environment variable or default mode active).`;
-      }
-      if (navApiKey) {
-        navApiKey.innerHTML = `⚙️ API Key`;
-      }
-    }
-  }
-
-  updateKeyStatusUI();
-
-  function openApiKeyModal() {
-    updateKeyStatusUI();
-    if (apikeyModal) apikeyModal.classList.add('open');
-  }
-  function closeApiKeyModal() {
-    if (apikeyModal) apikeyModal.classList.remove('open');
-  }
-
-  if (navApiKey) navApiKey.addEventListener('click', (e) => {
-    e.preventDefault();
-    openApiKeyModal();
-  });
-  if (apikeyModalClose) apikeyModalClose.addEventListener('click', closeApiKeyModal);
-  if (apikeyModal) {
-    apikeyModal.addEventListener('click', (e) => {
-      if (e.target === apikeyModal) closeApiKeyModal();
-    });
-  }
-
-  if (saveVtKeyBtn && vtKeyInput) {
-    saveVtKeyBtn.addEventListener('click', () => {
-      const val = vtKeyInput.value.trim();
-      if (val) {
-        localStorage.setItem('vt_api_key', val);
-        updateKeyStatusUI();
-        if (vtKeyStatus) {
-          vtKeyStatus.innerHTML = `<span style="color:#4ade80">✓ Saved successfully!</span> Threat intelligence is now active.`;
-        }
-        setTimeout(closeApiKeyModal, 1200);
-      } else {
-        localStorage.removeItem('vt_api_key');
-        updateKeyStatusUI();
-      }
-    });
-  }
-
-  if (clearVtKeyBtn) {
-    clearVtKeyBtn.addEventListener('click', () => {
-      localStorage.removeItem('vt_api_key');
-      updateKeyStatusUI();
-      if (vtKeyStatus) {
-        vtKeyStatus.innerHTML = `<span style="color:#f87171">Key cleared.</span>`;
-      }
-    });
-  }
-
   if (explainLink) explainLink.addEventListener('click', openExplainModal);
   if (navHowItWorks) navHowItWorks.addEventListener('click', (e) => {
     e.preventDefault();
@@ -466,7 +388,6 @@ document.addEventListener('DOMContentLoaded', () => {
     if (e.key === 'Escape') {
       if (modal && modal.classList.contains('open')) closeExplainModal();
       if (aboutModal && aboutModal.classList.contains('open')) closeAboutModal();
-      if (apikeyModal && apikeyModal.classList.contains('open')) closeApiKeyModal();
     }
   });
 
