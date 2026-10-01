@@ -2,7 +2,7 @@ import express from 'express';
 import { createServer as createViteServer } from 'vite';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { analyzeTargetUrl } from './server/urlAnalysisService.ts';
+import { analyzeTargetUrl } from './server/urlAnalysisService';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
