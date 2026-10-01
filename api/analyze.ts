@@ -1,6 +1,7 @@
 import type { IncomingMessage } from 'node:http';
-import { analyzeTargetUrl } from '../server/urlAnalysisService.ts';
+import { analyzeTargetUrl } from '../server/urlAnalysisService';
 
+// Helper to parse JSON body across Vercel and Node environments
 async function parseRequestBody(req: IncomingMessage): Promise<any> {
   if ((req as any).body) {
     return (req as any).body;
@@ -23,6 +24,7 @@ async function parseRequestBody(req: IncomingMessage): Promise<any> {
 }
 
 export default async function handler(req: any, res: any) {
+  // Enable CORS
   res.setHeader('Access-Control-Allow-Credentials', 'true');
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Access-Control-Allow-Methods', 'GET,OPTIONS,PATCH,DELETE,POST,PUT');
