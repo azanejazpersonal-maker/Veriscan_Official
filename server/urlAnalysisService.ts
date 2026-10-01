@@ -1,8 +1,8 @@
 import dns from 'node:dns/promises';
 import { isIP } from 'node:net';
-import { queryDomainRdap, extractApexDomain, type RdapResult } from './rdapService.ts';
-import { queryThreatIntelligence, type ThreatIntelResult } from './threatIntelService.ts';
-import { computeRiskAnalysis, type RiskAnalysisResult } from './riskScoringService.ts';
+import { queryDomainRdap, extractApexDomain, type RdapResult } from './rdapService';
+import { queryThreatIntelligence, type ThreatIntelResult } from './threatIntelService';
+import { computeRiskAnalysis, type RiskAnalysisResult } from './riskScoringService';
 
 export interface AnalysisResponse {
   success: boolean;

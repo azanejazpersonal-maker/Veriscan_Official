@@ -14,8 +14,8 @@
  * - Never treats unavailable data as positive evidence or proof of fraud.
  */
 
-import type { RdapResult } from './rdapService.ts';
-import type { ThreatIntelResult } from './threatIntelService.ts';
+import type { RdapResult } from './rdapService';
+import type { ThreatIntelResult } from './threatIntelService';
 
 export interface ScoreFactor {
   factor: string;
