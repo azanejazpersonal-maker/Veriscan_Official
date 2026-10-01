@@ -1,0 +1,522 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VERISCAN — Website & Business Trust Analysis</title>
+    <meta name="description" content="Know Before You Trust. Analyze websites and businesses for trust signals, security indicators, reputation, and potential scam risks." />
+    <meta property="og:title" content="VERISCAN — Website & Business Trust Analysis" />
+    <meta property="og:description" content="Know Before You Trust. Analyze websites and businesses for trust signals, security indicators, reputation, and potential scam risks." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="VERISCAN — Website & Business Trust Analysis" />
+    <meta name="twitter:description" content="Know Before You Trust. Analyze websites and businesses for trust signals, security indicators, reputation, and potential scam risks." />
+    
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'%3E%3Cg transform='rotate(-30 12 12)'%3E%3Ccircle cx='7.3' cy='3.2' r='1.45'/%3E%3Crect x='5.5' y='4.7' width='3.6' height='14.6' rx='1.8'/%3E%3Crect x='14.9' y='4.7' width='3.6' height='14.6' rx='1.8'/%3E%3Ccircle cx='16.7' cy='20.8' r='1.45'/%3E%3C/g%3E%3C/svg%3E" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900&family=Instrument+Serif:ital@1&display=swap" rel="stylesheet">
+
+    <!-- Anti-flash inline style -->
+    <style>
+      html, body { background: #000000 !important; color: #ffffff; }
+    </style>
+
+    <link rel="stylesheet" href="/src/style.css" />
+    <link rel="stylesheet" href="/src/analysis-ui.css" />
+  </head>
+  <body style="background:#000;color:#fff">
+    <!-- Grain overlay -->
+    <div class="grain"></div>
+
+    <!-- Background photo / video -->
+    <div class="hero-photo appear appear--soft" style="--d: 0s;">
+      <video autoplay loop muted playsinline preload="auto" src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260818_072341_50851634-bbc3-4c33-9acc-7647d4db44aa.mp4"></video>
+    </div>
+
+    <!-- Main Page Frame -->
+    <div class="page">
+      <div class="menu-backdrop"></div>
+
+      <!-- Header -->
+      <header class="header">
+        <a href="#top" class="logo appear appear--scale" aria-label="VERISCAN" style="--d: 0.08s;">
+          <svg class="logo-mark" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <g transform="rotate(-30 12 12)">
+              <circle cx="7.3" cy="3.2" r="1.45" />
+              <rect x="5.5" y="4.7" width="3.6" height="14.6" rx="1.8" />
+              <rect x="14.9" y="4.7" width="3.6" height="14.6" rx="1.8" />
+              <circle cx="16.7" cy="20.8" r="1.45" />
+            </g>
+          </svg>
+          <span>VERISCAN</span>
+          <span class="logo-tag">TRUST OS</span>
+        </a>
+
+        <nav id="site-nav" aria-label="Primary">
+          <a href="#how-it-works" id="nav-how-it-works" class="nav-pill appear appear--scale" style="--d: 0.16s;">How It Works</a>
+          <a href="#signals" id="nav-signals" class="nav-pill appear appear--soft" style="--d: 0.28s;">Trust Signals</a>
+          <a href="#categories" id="nav-categories" class="nav-pill appear appear--scale" style="--d: 0.40s;">Security Checks</a>
+          <a href="#about" id="nav-about" class="nav-pill appear appear--soft" style="--d: 0.52s;">About</a>
+        </nav>
+
+        <a href="#top" class="btn btn-solid header-cta appear appear--scale" style="--d: 0.34s;">Analyze Website</a>
+
+        <button type="button" class="burger appear appear--scale" aria-controls="site-nav" aria-expanded="false" aria-label="Open menu" style="--d: 0.34s;">
+          <span class="burger-bar"></span>
+          <span class="burger-bar"></span>
+          <span class="burger-bar"></span>
+        </button>
+      </header>
+
+      <!-- Main Stage -->
+      <main class="hero" id="top">
+        <!-- 1. Hero Input State -->
+        <div class="hero-copy hero-view" id="hero-view">
+          <div class="badge appear appear--pop" style="--d: 0.22s;">
+            <svg class="badge-star" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M12 2.6C12.55 2.6 12.88 3.15 13.08 4.7c.62 4.7 1.52 5.6 6.22 6.22 1.55.2 2.1.53 2.1 1.08s-.55.88-2.1 1.08c-4.7.62-5.6 1.52-6.22 6.22-.2 1.55-.53 2.1-1.08 2.1s-.88-.55-1.08-2.1c-.62-4.7-1.52-5.6-6.22-6.22C3.15 12.88 2.6 12.55 2.6 12s.55-.88 2.1-1.08c4.7-.62 5.6-1.52 6.22-6.22C11.12 3.15 11.45 2.6 12 2.6Z"/>
+            </svg>
+            <span>AI-Powered Trust Analysis</span>
+          </div>
+
+          <h1 class="headline">
+            <span class="headline-line">
+              <span class="headline-inner appear appear--mask" style="--d: 0.42s;">Is this website</span>
+            </span>
+            <span class="headline-line">
+              <span class="headline-inner appear appear--mask" style="--d: 0.62s;"><em>safe to trust?</em></span>
+            </span>
+          </h1>
+
+          <p class="lede appear appear--soft" style="--d: 0.82s;">
+            Analyze websites and businesses for trust signals, security indicators, reputation, and potential scam risks before you buy, pay, or share your information.
+          </p>
+
+          <!-- Interactive URL Form -->
+          <div class="analyzer-form-wrapper appear appear--btn" style="--d: 0.96s;">
+            <form id="analyzer-form">
+              <div class="analyzer-box">
+                <svg class="analyzer-input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <line x1="2" y1="12" x2="22" y2="12"></line>
+                  <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                </svg>
+                <input 
+                  type="text" 
+                  id="url-input" 
+                  class="analyzer-input" 
+                  placeholder="Enter a website URL, e.g. https://example.com" 
+                  autocomplete="off" 
+                  spellcheck="false" 
+                />
+                <button type="submit" class="btn btn-solid analyzer-submit-btn">
+                  Analyze Website
+                </button>
+              </div>
+            </form>
+
+            <!-- Inline error message -->
+            <div id="analyzer-error" class="analyzer-error" role="alert"></div>
+
+            <!-- Quick sample URLs for easy testing -->
+            <div class="quick-samples">
+              <span>Try test cases:</span>
+              <button type="button" class="sample-pill safe-pill" data-url="https://stripe.com">stripe.com (Low Risk)</button>
+              <button type="button" class="sample-pill" data-url="https://artisan-ceramics.shop">artisan-ceramics.shop (Medium)</button>
+              <button type="button" class="sample-pill danger-pill" data-url="https://crypto-airdrop-reward.click">crypto-airdrop-reward.click (High)</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. Cinematic Scanning View -->
+        <div class="scan-view" id="scan-view">
+          <div class="scanning-card">
+            <div class="scanning-radar">
+              <svg class="radar-center-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+              </svg>
+            </div>
+
+            <div id="scan-target-url" class="scan-target-url">https://example.com</div>
+            <h2 class="scan-title">Investigating Trust Signals</h2>
+            <div id="scan-phase-desc" class="scan-phase-desc">Initializing telemetry...</div>
+
+            <!-- 7 Inspection Steps -->
+            <div class="scan-steps-list">
+              <div class="scan-step-item is-pending">
+                <div class="step-label">
+                  <span class="step-num">01</span>
+                  <span>Domain Information & WHOIS History</span>
+                </div>
+                <div class="step-status-icon">○</div>
+              </div>
+              <div class="scan-step-item is-pending">
+                <div class="step-label">
+                  <span class="step-num">02</span>
+                  <span>HTTPS & SSL/TLS Encryption Quality</span>
+                </div>
+                <div class="step-status-icon">○</div>
+              </div>
+              <div class="scan-step-item is-pending">
+                <div class="step-label">
+                  <span class="step-num">03</span>
+                  <span>Website Identity & Brand Verification</span>
+                </div>
+                <div class="step-status-icon">○</div>
+              </div>
+              <div class="scan-step-item is-pending">
+                <div class="step-label">
+                  <span class="step-num">04</span>
+                  <span>Business Information & Legal Registry</span>
+                </div>
+                <div class="step-status-icon">○</div>
+              </div>
+              <div class="scan-step-item is-pending">
+                <div class="step-label">
+                  <span class="step-num">05</span>
+                  <span>Reputation Signals & Threat Blacklists</span>
+                </div>
+                <div class="step-status-icon">○</div>
+              </div>
+              <div class="scan-step-item is-pending">
+                <div class="step-label">
+                  <span class="step-num">06</span>
+                  <span>Suspicious Patterns & Urgency Heuristics</span>
+                </div>
+                <div class="step-status-icon">○</div>
+              </div>
+              <div class="scan-step-item is-pending">
+                <div class="step-label">
+                  <span class="step-num">07</span>
+                  <span>Trust Indicators, Policies & Compliance</span>
+                </div>
+                <div class="step-status-icon">○</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. Results Dashboard View -->
+        <div class="results-view" id="results-view">
+          <div class="results-card">
+            <!-- Topbar -->
+            <div class="results-topbar">
+              <div class="results-url-display">
+                <span style="color:#888">Analyzed:</span>
+                <span id="results-host-badge" class="results-host-badge">example.com</span>
+                <span id="analysis-mode-tag" class="demo-tag">Live Analysis</span>
+              </div>
+              <div class="results-actions-top">
+                <button type="button" id="reset-top-btn" class="btn btn-ghost" style="height:34px;padding:0 12px;font-size:12.5px">
+                  Analyze Another
+                </button>
+              </div>
+            </div>
+
+            <!-- Score Banner -->
+            <div id="score-banner" class="score-banner risk-low">
+              <div class="score-radial">
+                <div style="text-align:center">
+                  <div id="results-score-value" class="score-number">200</div>
+                  <div id="results-score-scale" class="score-scale">HTTP Code</div>
+                </div>
+              </div>
+              <div>
+                <div id="risk-level-badge" class="risk-level-badge">LOW RISK</div>
+                <div id="risk-summary-text" class="risk-summary-text">
+                  High indicators of institutional legitimacy. Domain has an established history with valid security certificates and clean threat telemetry.
+                </div>
+              </div>
+              <div>
+                <button type="button" id="reset-btn" class="btn btn-solid" style="height:38px;padding:0 16px;font-size:13px">
+                  Analyze Another Website
+                </button>
+              </div>
+            </div>
+
+            <!-- Signals Grid -->
+            <div class="signals-grid">
+              <div class="signal-box">
+                <div class="signal-box-title pos">
+                  <span>✓</span>
+                  <span>Positive Signals</span>
+                </div>
+                <ul id="positives-list" class="signal-list"></ul>
+              </div>
+
+              <div class="signal-box">
+                <div class="signal-box-title warn">
+                  <span>⚠</span>
+                  <span>Warning Signals & Observations</span>
+                </div>
+                <ul id="warnings-list" class="signal-list"></ul>
+              </div>
+            </div>
+
+            <!-- Data Availability Notice (if telemetry is limited) -->
+            <div id="data-availability-banner" class="data-availability-banner" style="display:none"></div>
+
+            <!-- Transparent Scoring Breakdown -->
+            <div id="scoring-factors-card" class="factors-card" style="display:none">
+              <div class="factors-header">
+                <div class="factors-title-wrap">
+                  <svg class="factors-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="18" y1="20" x2="18" y2="10"></line>
+                    <line x1="12" y1="20" x2="12" y2="4"></line>
+                    <line x1="6" y1="20" x2="6" y2="14"></line>
+                  </svg>
+                  <h4>TRANSPARENT SCORING BREAKDOWN</h4>
+                </div>
+                <span class="factors-badge">Deterministic Model</span>
+              </div>
+              <div id="factors-list" class="factors-list"></div>
+            </div>
+
+            <!-- Real Threat Intelligence Telemetry Section -->
+            <div class="threat-intel-section" id="threat-intel-section">
+              <div class="threat-intel-card">
+                <div class="threat-intel-header">
+                  <div class="threat-intel-title-wrap">
+                    <svg class="threat-intel-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                    </svg>
+                    <h4>THREAT INTELLIGENCE</h4>
+                  </div>
+                  <span id="threat-status-badge" class="threat-badge is-unavailable">API Not Configured</span>
+                </div>
+                <div class="threat-intel-grid">
+                  <div class="threat-intel-item">
+                    <span class="threat-intel-label">Provider</span>
+                    <span class="threat-intel-value" id="threat-provider">VirusTotal</span>
+                  </div>
+                  <div class="threat-intel-item">
+                    <span class="threat-intel-label">Malicious Detections</span>
+                    <span class="threat-intel-value" id="threat-malicious">0</span>
+                  </div>
+                  <div class="threat-intel-item">
+                    <span class="threat-intel-label">Suspicious Detections</span>
+                    <span class="threat-intel-value" id="threat-suspicious">0</span>
+                  </div>
+                  <div class="threat-intel-item">
+                    <span class="threat-intel-label">Harmless / Clean</span>
+                    <span class="threat-intel-value" id="threat-harmless">Unavailable</span>
+                  </div>
+                  <div class="threat-intel-item">
+                    <span class="threat-intel-label">Undetected</span>
+                    <span class="threat-intel-value" id="threat-undetected">Unavailable</span>
+                  </div>
+                  <div class="threat-intel-item">
+                    <span class="threat-intel-label">Security Engines Checked</span>
+                    <span class="threat-intel-value" id="threat-total">Unavailable</span>
+                  </div>
+                </div>
+                <div id="threat-notice-text" class="threat-notice">
+                  Threat-intelligence analysis unavailable (VIRUSTOTAL_API_KEY is not configured on the server).
+                </div>
+              </div>
+            </div>
+
+            <!-- Real Domain Registration (RDAP) Section -->
+            <div class="rdap-section" id="rdap-section">
+              <div class="rdap-card">
+                <div class="rdap-card-header">
+                  <div class="rdap-title-wrap">
+                    <svg class="rdap-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                      <line x1="8" y1="21" x2="16" y2="21"></line>
+                      <line x1="12" y1="17" x2="12" y2="21"></line>
+                    </svg>
+                    <h4>DOMAIN INFORMATION</h4>
+                  </div>
+                  <span id="rdap-status-badge" class="rdap-badge">RDAP Available</span>
+                </div>
+                <div class="rdap-grid">
+                  <div class="rdap-item">
+                    <span class="rdap-label">Domain</span>
+                    <span class="rdap-value" id="rdap-domain">example.com</span>
+                  </div>
+                  <div class="rdap-item">
+                    <span class="rdap-label">Registrar</span>
+                    <span class="rdap-value" id="rdap-registrar">Unavailable</span>
+                  </div>
+                  <div class="rdap-item">
+                    <span class="rdap-label">Created Date</span>
+                    <span class="rdap-value" id="rdap-created">Unavailable</span>
+                  </div>
+                  <div class="rdap-item">
+                    <span class="rdap-label">Domain Age</span>
+                    <span class="rdap-value" id="rdap-age">Unavailable</span>
+                  </div>
+                  <div class="rdap-item">
+                    <span class="rdap-label">Expires Date</span>
+                    <span class="rdap-value" id="rdap-expires">Unavailable</span>
+                  </div>
+                  <div class="rdap-item">
+                    <span class="rdap-label">Last Updated</span>
+                    <span class="rdap-value" id="rdap-updated">Unavailable</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Detailed 7 Checks Section -->
+            <div class="checks-section">
+              <div class="checks-header">
+                <h3>Technical Checks & Security Telemetry</h3>
+                <span id="explain-link" class="checks-explain-link">
+                  <span>What do these checks mean?</span>
+                  <span>↗</span>
+                </span>
+              </div>
+              <div id="checks-grid" class="checks-grid"></div>
+            </div>
+
+            <!-- Mandatory Disclaimer -->
+            <div class="results-disclaimer">
+              <strong>Disclaimer:</strong> VERISCAN provides evidence-based risk analysis and cannot guarantee that a website or business is legitimate or fraudulent. Security and reputation data may be incomplete or change over time.
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <!-- Stats Footer -->
+      <footer class="stats">
+        <div class="stat appear appear--stat" style="--d: 1.12s;">
+          <svg class="stat-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <defs>
+              <linearGradient id="pillGrad1" x1="3" y1="2" x2="14" y2="22" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stop-color="#ffffff" stop-opacity="0.38"/>
+                <stop offset="100%" stop-color="#3a3a3a" stop-opacity="0.62"/>
+              </linearGradient>
+              <linearGradient id="pillGrad2" x1="3" y1="2" x2="14" y2="22" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stop-color="#3a3a3a" stop-opacity="0.38"/>
+                <stop offset="100%" stop-color="#ffffff" stop-opacity="0.62"/>
+              </linearGradient>
+            </defs>
+            <rect x="3.4" y="2.6" width="7.2" height="18.8" rx="3.6" fill="url(#pillGrad1)" />
+            <rect x="13.4" y="2.6" width="7.2" height="18.8" rx="3.6" fill="url(#pillGrad2)" />
+            <rect x="9.2" y="10.9" width="5.6" height="2.2" rx="1.1" fill="#4a4a4a" />
+          </svg>
+          <span>4.2M+ domains analyzed</span>
+        </div>
+
+        <div class="stat appear appear--stat" style="--d: 1.28s;">
+          <svg class="stat-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <rect x="2.4" y="2.4" width="19.2" height="19.2" rx="6.2" fill="#ffffff" />
+            <path d="M12 7.1v7.4" stroke="#111111" stroke-width="1.85" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M8.15 12.35L12 16.2l3.85-3.85" stroke="#111111" stroke-width="1.85" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+          </svg>
+          <span>99.4% scam & fraud detection rate</span>
+        </div>
+
+        <div class="stat appear appear--stat" style="--d: 1.44s;">
+          <svg class="stat-icon-wide" viewBox="0 0 40 22" fill="none" aria-hidden="true">
+            <g>
+              <circle cx="10.2" cy="11" r="9.2" fill="#2b2b2b" />
+              <polygon points="7.2,4.8 9.0,7.6 6.2,7.2" fill="#2b2b2b" />
+              <polygon points="13.2,4.8 11.4,7.6 14.2,7.2" fill="#2b2b2b" />
+              <ellipse cx="10.2" cy="12.1" rx="4.15" ry="3.7" fill="#f4f4f4" />
+              <circle cx="9.1" cy="11.4" r="0.7" fill="#1a1a1a" />
+              <circle cx="11.3" cy="11.4" r="0.7" fill="#1a1a1a" />
+            </g>
+            <g>
+              <circle cx="20.2" cy="11" r="9.2" fill="#ffffff" />
+              <circle cx="17.2" cy="9.8" r="1.7" fill="#111111" />
+              <circle cx="23.2" cy="9.8" r="1.7" fill="#111111" />
+              <ellipse cx="20.2" cy="12.2" rx="1.2" ry="0.9" fill="#111111" />
+              <path d="M17.8 13.8c0.8 1.4 4 1.4 4.8 0" stroke="#111111" stroke-width="1.2" stroke-linecap="round" fill="none" />
+            </g>
+            <g>
+              <circle cx="30.2" cy="11" r="9.2" fill="#f26b1d" />
+              <text x="30.2" y="15.1" font-size="12.5" font-family="'Inter', sans-serif" font-weight="700" text-anchor="middle" fill="#ffffff">e</text>
+            </g>
+          </svg>
+          <span>180+ enterprise security teams protected</span>
+        </div>
+      </footer>
+    </div>
+
+    <!-- Explanatory Modal -->
+    <div id="explain-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <div class="modal-card">
+        <div class="modal-header">
+          <h2 id="modal-title">What Do These Checks Mean?</h2>
+          <button type="button" id="modal-close" class="modal-close-btn" aria-label="Close dialog">✕</button>
+        </div>
+
+        <div class="explain-category">
+          <h4>1. Domain Information</h4>
+          <p>Examines how long a domain has been registered, expiration dates, and registrar credibility. Scams frequently use newly registered domains that are abandoned within weeks.</p>
+        </div>
+
+        <div class="explain-category">
+          <h4>2. HTTPS / Security</h4>
+          <p>Validates cryptographic encryption, modern TLS protocols, cipher suites, and Certificate Authority trust chains.</p>
+        </div>
+
+        <div class="explain-category">
+          <h4>3. Website Identity</h4>
+          <p>Inspects ownership alignment, brand trademarks, and typosquatting signals designed to imitate legitimate institutions.</p>
+        </div>
+
+        <div class="explain-category">
+          <h4>4. Business Information</h4>
+          <p>Cross-references corporate registries, tax filings, verified headquarters, and operational telephone contacts.</p>
+        </div>
+
+        <div class="explain-category">
+          <h4>5. Reputation Signals</h4>
+          <p>Queries threat intelligence databases, spam lists, community fraud reporting, and security telemetry.</p>
+        </div>
+
+        <div class="explain-category">
+          <h4>6. Suspicious Patterns</h4>
+          <p>Detects deceptive user interfaces, countdown timers, fake stock counters, and covert payment redirections.</p>
+        </div>
+
+        <div class="explain-category">
+          <h4>7. Trust Indicators</h4>
+          <p>Evaluates terms of service, clear privacy disclosures, return policies, and consumer protection guarantees.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- About VERISCAN Modal -->
+    <div id="about-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="about-modal-title">
+      <div class="modal-card">
+        <div class="modal-header">
+          <h2 id="about-modal-title">About VERISCAN</h2>
+          <button type="button" id="about-modal-close" class="modal-close-btn" aria-label="Close dialog">✕</button>
+        </div>
+
+        <div class="explain-category">
+          <h4>What We Use to Analyze Websites</h4>
+          <p>VERISCAN combines multiple layers of factual network inspection and domain telemetry to provide objective security evidence:</p>
+          <ul style="margin-top: 8px; margin-left: 18px; line-height: 1.6; font-size: 12.5px; color: #cbd5e1;">
+            <li><strong>Live Network Connectivity:</strong> Server-side probes that measure real-time HTTP reachability, status codes (200, 301, 404, etc.), latency, and TLS/HTTPS transport encryption.</li>
+            <li><strong>SSRF & Internal IP Defense:</strong> Pre-request DNS resolution checks that block loopback (127.0.0.1), private subnets, cloud metadata (169.254.169.254), and non-routable addresses.</li>
+            <li><strong>Safe Redirect Traversal:</strong> Follows redirect chains hop-by-hop up to 5 levels, re-validating security parameters before following any destination.</li>
+            <li><strong>Authoritative RDAP Domain Registry:</strong> Directly queries RFC 9082/9083 RDAP endpoints across global TLD registries to retrieve authentic registrar identities and calculate exact domain age.</li>
+            <li><strong>Threat Intelligence Telemetry:</strong> Integrates with VirusTotal API v3 to aggregate real security telemetry across 70+ global antivirus and domain reputation vendors.</li>
+            <li><strong>Zero Client Payload Execution:</strong> Never runs target website JavaScript and never downloads large files.</li>
+          </ul>
+        </div>
+
+        <div class="about-creator-card">
+          <div class="about-creator-info">
+            <span class="about-creator-name">Created by Azan Ejaz (15 y/o)</span>
+            <span class="about-creator-subtitle">Founder & Cybersecurity Engineer</span>
+          </div>
+          <a href="https://www.instagram.com/azanejaz_/" target="_blank" rel="noopener noreferrer" class="about-ig-link">
+            <span>@azanejaz_ on Instagram</span>
+            <span>↗</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <script type="module" src="/src/app.js"></script>
+  </body>
+</html>
